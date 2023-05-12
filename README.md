@@ -56,9 +56,9 @@ uses
 * Configure os dados básicos do framework, caso deseje:
 ```
 C4DConsole
-     .Prefix('C4DConsoleDemo01')
-     .Version('1.0.0')
-     .Port(0);
+    .Prefix('C4DConsoleDemo01')
+    .Version('1.0.0')
+    .Port(0);
 ```
 
 * Estrutura básica de código, do arquivo .dpr:
@@ -127,6 +127,7 @@ MeuPrefix  RESUMO:
 ```
 
 ## 🖥️ Métodos disponíveis:
+### Ativar/Desativar Logs
 * Verificar se o log esta ativo:
 ```
 var
@@ -146,7 +147,51 @@ C4DConsole.EnableLog;
 C4DConsole.DisableLog;
 ```
 
+### Inserir um resumo inicial
+* Comando:
+```
+C4DConsole.WriteInitialSummary;
+```
+* Será exibido:
+
+![Print-Console-Init](https://github.com/Code4Delphi/C4D-Console/blob/master/Img/Readme/Print-Console-Init.png)
+
+
 ### Outros métodos:
+* Exibir data e hora atual:
+```C4DConsole.DtHrStr;```
+
+* Inserir data e hora da compilação do projeto:
+```C4DConsole.DhCompilation;```
+
+* Inserir um texto na tela ___sem___ quebra de linha:
+```C4DConsole.WriteStr('Texto a ser exibido');```
+
+* Inserir um texto na tela ___com___ quebra de linha::
+```C4DConsole.WriteStrLn('Texto a ser exibido');```
+
+* Inserir um texto na tela com a **data e hora** como prefixo ___sem___ quebra de linha:
+```C4DConsole.WriteDh('Texto a ser exibido');```
+
+* Inserir um texto na tela com a **data e hora** como prefixo ___com___ quebra de linha:
+```C4DConsole.WriteDhLn('Texto a ser exibido');```
+
+* Inserir quebra de linhas:
+```C4DConsole.BreachLines(2);```
+
+* Inserir separador de linha ___sem___ quebra de linha:
+```C4DConsole.WriteLineSeparation('#', 80);```
+
+* Inserir separador de linha ___com___ quebra de linha:
+```C4DConsole.WritelnLineSeparation('#', 80);```
+
+* Metodo usado para processar o que for digitado no console:
+```
+   ReadLn(FDig);
+   C4DConsole.ProcessDigitated(FDig);
+```
+
+### Métodos Get e Set:
 
 | Método | Tipo | Obter | Setar | Valor Default |
 | ------------- | --------- | --------------------------------- | --------------------------------- | -------------- |
@@ -157,8 +202,11 @@ C4DConsole.DisableLog;
 | CommandFinish | String    | ``` LStr := C4DConsole.CommandFinish; ``` | ``` C4DConsole.CommandFinish('\q'); ```   | \q             | 
 
 
-
-
+## ⌨️ Demo
+* Junto aos fontes do projeto, você encontrara um projeto teste, na pasta:
+```
+..\C4D-Console\Samples\Demo01
+```
 
 
 
