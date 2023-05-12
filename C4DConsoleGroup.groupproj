@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{88289CDC-55B0-4797-855E-44B8F7CF733B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="C4DConsole.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Samples\Demo01\C4DConsoleDemo01.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="C4DConsole">
+        <MSBuild Projects="C4DConsole.dproj"/>
+    </Target>
+    <Target Name="C4DConsole:Clean">
+        <MSBuild Projects="C4DConsole.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="C4DConsole:Make">
+        <MSBuild Projects="C4DConsole.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="C4DConsoleDemo01">
+        <MSBuild Projects="Samples\Demo01\C4DConsoleDemo01.dproj"/>
+    </Target>
+    <Target Name="C4DConsoleDemo01:Clean">
+        <MSBuild Projects="Samples\Demo01\C4DConsoleDemo01.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="C4DConsoleDemo01:Make">
+        <MSBuild Projects="Samples\Demo01\C4DConsoleDemo01.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="C4DConsole;C4DConsoleDemo01"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="C4DConsole:Clean;C4DConsoleDemo01:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="C4DConsole:Make;C4DConsoleDemo01:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,9 @@
+{
+	"name": "C4D-Console",
+	"description": "",
+	"version": "1.0.0",
+	"homepage": "https://github.com/Code4Delphi/C4D-Console",
+	"mainsrc": "Src",
+	"projects": [],
+	"dependencies": {}
+}
