@@ -34,6 +34,7 @@ type
     function DhIni(const Value: TDateTime): TC4DConsole; overload;
     function CommandFinish: String; overload;
     function CommandFinish(const Value: String): TC4DConsole; overload;
+
     function WriteInitialSummary(const AStrFirstLine: String): TC4DConsole;
     function DtHrStr: String;
     function DhCompilation: String;
@@ -69,6 +70,7 @@ constructor TC4DConsole.Create;
 begin
    FLogEnabled    := True;
    FPrefix        := 'C4D';
+   FVersion       := '';
    FDhIni         := Now;
    FCommandFinish := TC4DConsoleConsts.CMD_FINISH_DEFAULT;
 end;
