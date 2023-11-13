@@ -34,7 +34,6 @@ type
     function DhIni(const Value: TDateTime): TC4DConsole; overload;
     function CommandFinish: string; overload;
     function CommandFinish(const Value: string): TC4DConsole; overload;
-
     function WriteInitialSummary(const AStrFirstLine: string): TC4DConsole;
     function DtHrStr: string;
     function DhCompilation: string;
