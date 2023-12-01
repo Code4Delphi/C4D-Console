@@ -1,8 +1,8 @@
 #  C4D-Console - Framework para escrita de logs em Console Application
 <p align="center">
-  <a href="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Img/C4D-Logo.png">
-    <img alt="Horse" height="100" src="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Img/c4d-logo-100x100.png">
-  </a>  
+  <a href="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/C4D-Logo.png">
+    <img alt="Code4Delphi" height="100" src="https://github.com/Code4Delphi/Code4D-Wizard/blob/master/Images/c4d-logo-100x100.png">
+  </a> 
 </p>
 Com o C4D-Console, você pode controlar de uma forma rápida e fácil, a escrita de Logs para quando estiver utilizando um projeto Console Application no Delphi
 
