@@ -16,9 +16,7 @@ type
     FCommandFinish: string;
     constructor Create;
     function WritePrefixLine: string;
-    procedure WritelnInternal(const AStr: string;
-      const AInsertPrefixNewLine: Boolean = True;
-      const AForceWriting: Boolean = False);
+    procedure WritelnInternal(const AStr: string; const AInsertPrefixNewLine: Boolean = True; const AForceWriting: Boolean = False);
     procedure LinhaRodape;
   public
     function LogEnabled: Boolean;
@@ -196,12 +194,10 @@ end;
 function TC4DConsole.WriteDhLn(const AStr: string; const AForceWriting: Boolean = False): TC4DConsole;
 begin
   Result := Self;
-  Writeln(Self.DtHrStr + AStr, AForceWriting);
+  Self.WritelnInternal(Self.DtHrStr + AStr, AForceWriting);
 end;
 
-procedure TC4DConsole.WritelnInternal(const AStr: string;
-  const AInsertPrefixNewLine: Boolean = True;
-  const AForceWriting: Boolean = False);
+procedure TC4DConsole.WritelnInternal(const AStr: string; const AInsertPrefixNewLine: Boolean = True; const AForceWriting: Boolean = False);
 begin
   if(AForceWriting)or(FLogEnabled)then
   begin
